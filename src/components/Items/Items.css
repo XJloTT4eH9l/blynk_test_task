@@ -1,0 +1,114 @@
+.items {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    background-color: #f9f9f9;
+}
+
+.items__title {
+    font-size: 30px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-item__input {
+    width: 75%;
+    padding: 5px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.2s linear;
+}
+
+.form-item__input:focus {
+    border-color: #17a2b8;
+    outline: none;
+}
+
+.form-item__submit {
+    border: 0;
+    border-radius: 4px;
+    padding: 5px 15px;
+    color: #ffffff;
+    background-color: #17a2b8;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+.form-item__submit:hover {
+    background-color: #136a77;
+}
+
+.list-items__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    transition: border-color 0.2s linear;
+}
+
+.list-items__item:first-child {
+    border-top: 1px solid #ced4da;
+    border-radius: 6px 6px 0 0;
+}
+
+.list-items__item:last-child {
+    border-radius: 0 0 6px 6px;
+    border-bottom: 1px solid #ced4da;
+}
+
+.list-items__item--active {
+    border-left: 4px solid deeppink !important;
+}
+
+.single {
+    border: 1px solid #ced4da;
+    border-radius: 6px !important;
+}
+
+.list-items__title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.list-items__delete {
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 5px 10px;
+    color: #dc3545;
+    background-color: #ffffff;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    transition: color 0.2s linear, background-color 0.2s linear;
+}
+
+.list-items__delete:hover {
+    color: #ffffff;
+    background-color: #dc3545;
+}
+
+.list-items__count {
+    padding: 3px 5px;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #17a2b8;
+}
+
+@media screen and (max-width: 500px) {
+    .form-item__input {
+        width: 60%;
+    }
+}

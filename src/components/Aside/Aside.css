@@ -1,0 +1,32 @@
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    background-color: #2b2f3e;
+    text-align: center;
+}
+
+.aside__title {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.aside__text {
+    color: #5b5d63;
+}
+
+@media screen and (max-width: 1000px) {
+    .aside {
+      width: 150px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .aside {
+      width: 100%;
+      height: auto;
+    }
+}
