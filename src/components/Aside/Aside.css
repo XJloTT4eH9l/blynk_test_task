@@ -7,6 +7,7 @@
     padding: 10px;
     background-color: #2b2f3e;
     text-align: center;
+    z-index: 10;
 }
 
 .aside__title {
