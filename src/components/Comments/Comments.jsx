@@ -39,7 +39,6 @@ const Comments = ({ setCurrentItem, currentItem, items, setItems }) => {
         }
     }
 
-
     return (
         <section className="comments">
             <h2 className='comments__title'>Coments #{currentItem ? currentItem.id : ''}</h2>
@@ -48,8 +47,10 @@ const Comments = ({ setCurrentItem, currentItem, items, setItems }) => {
                 {currentItem && (
                     currentItem.comments.map(comment => (
                         <li key={comment.id} className='list-comments__comment'>
-                            <span style={{display: 'block', width: '50px', height: '50px', backgroundColor: comment.color}}/>
-                            <p className='list-comments__text'>{comment.text}</p>
+                            <span className='list-comments__color' style={{ backgroundColor: comment.color }} />
+                            <div className="list-comments__body">
+                                <p className='list-comments__text'>{comment.text}</p>
+                            </div>
                         </li>
                     ))
                 )}
@@ -66,7 +67,8 @@ const Comments = ({ setCurrentItem, currentItem, items, setItems }) => {
                     value={text} 
                     onChange={(e) => setText(e.target.value)} 
                     className='form-comments__text-area' 
-                    placeholder='Type comment here...' 
+                    placeholder='Type comment here...'
+                    maxLength={600} 
                 />
                 <button className='form-comments__submit' type='submit'>Add new</button>
             </form>

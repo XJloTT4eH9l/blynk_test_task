@@ -17,13 +17,26 @@
     margin-bottom: 10px;
 }
 
+.list-comments__color {
+    display: block;
+    width: 50px; 
+    height: 50px;
+}
+
+.list-comments__body {
+    padding: 0 0 0 10px;
+}
+
 .list-comments__comment {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .list-comments__text {
-    margin-left: 15px;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 400px;
 }
 
 .list-comments__comment:not(:last-child) {
@@ -80,6 +93,12 @@
     background-color: #136a77;
 }
 
+@media screen and (max-width: 550px) {
+    .list-comments__text {
+        max-width: 300px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .form-comments__color-pick {
         width: 50px;
@@ -94,5 +113,11 @@
         height: 50px;
         min-height: 50px;
         max-height: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .list-comments__text {
+        max-width: 200px;
     }
 }
